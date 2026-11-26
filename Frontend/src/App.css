@@ -1,0 +1,197 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #252b42;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #202b46;
+  color: white;
+  padding: 30px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+}
+
+.sidebar p {
+  padding: 14px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar .active,
+.sidebar p:hover {
+  background: #354565;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #777;
+}
+
+.stats {
+  margin-bottom: 25px;
+}
+
+.stat-card,
+.form-section,
+.table-section {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card {
+  width: 240px;
+}
+
+.stat-card h3 {
+  color: #777;
+  font-size: 15px;
+}
+
+.stat-card h2 {
+  margin-top: 12px;
+  font-size: 30px;
+}
+
+.form-section h2,
+.table-section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #405bd5;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button {
+  background: #405bd5;
+  color: white;
+}
+
+.table-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.table-heading input {
+  max-width: 280px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+th {
+  background: #f7f8fc;
+}
+
+.edit-btn {
+  background: #e7edff;
+  color: #304fc5;
+  margin-right: 6px;
+}
+
+.delete-btn {
+  background: #ffe8e8;
+  color: #d83232;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 150px;
+    padding: 20px 10px;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .table-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
